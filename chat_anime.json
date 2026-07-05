@@ -1,24 +1,22 @@
-{
-  "anime_websites": [
-    "https://www.rareanimes.buzz",
-    "https://anizen.tr",
-    "https://hianime.cv",
-    "http://anikai.cc",
-    "https://www.miruro.to",
-    "https://kaido.rest",
-    "https://anikoto.cz",
-    "https://animetsu.net",
-    "https://aniwaves.ru",
-    "https://animedao.in",
-    "https://anizone.to",
-    "https://anidb.app",
-    "https://animex.one",
-    "https://anisnatch.top",
-    "https://kyren.moe",
-    "https://animesuge.cz",
-    "https://animesalt.ac",
-    "https://reanime.to",
-    "https://animeflixtv.com",
-    "https://itachi.tv"
-  ]
-}
+[
+  ["https://www.rareanimes.buzz", "l"],
+  ["https://anizen.tr", "r"],
+  ["https://hianime.cv", "r"],
+  ["http://anikai.cc", "r"],
+  ["https://www.miruro.to", "r"],
+  ["https://kaido.rest", "r"],
+  ["https://anikoto.cz", "r"],
+  ["https://animetsu.net", "r"],
+  ["https://aniwaves.ru", "r"],
+  ["https://animedao.in", "r"],
+  ["https://anizone.to", "r"],
+  ["https://anidb.app", "r"],
+  ["https://animex.one", "r"],
+  ["https://anisnatch.top", "r"],
+  ["https://kyren.moe", "r"],
+  ["https://animesuge.cz", "r"],
+  ["https://animesalt.ac", "r"],
+  ["https://reanime.to", "r"],
+  ["https://animeflixtv.com", "r"],
+  ["https://itachi.tv", "r"]
+]
