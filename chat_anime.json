@@ -1,4 +1,5 @@
-[ ["https://www.rareanimes.buzz", "l"],
+[ 
+  ["https://www.rareanimes.buzz", "l"],
   ["https://44anime.com/", "l"],
   ["https://anizen.tr", "r"],
   ["https://hianime.cv", "r"],
@@ -20,4 +21,6 @@
   ["https://itachi.tv", "r"],
   ["https://anidb.app/home", "r"],
   ["https://anidap.se/home", "r"],
- ,["https://samy.nav.bd", "l"] ]
+ ,["https://samy.nav.bd", "l"]
+
+]
