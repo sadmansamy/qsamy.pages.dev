@@ -11,7 +11,6 @@
   ["https://aniwaves.ru", "r"],
   ["https://animedao.in", "r"],
   ["https://anizone.to", "r"],
-  ["https://anidb.app", "r"],
   ["https://animex.one", "r"],
   ["https://anisnatch.top", "r"],
   ["https://kyren.moe", "r"],
@@ -19,5 +18,7 @@
   ["https://animesalt.ac", "r"],
   ["https://reanime.to", "r"],
   ["https://animeflixtv.com", "r"],
-  ["https://itachi.tv", "r"]
+  ["https://itachi.tv", "r"],
+  ["https://anidb.app/home", "r"],
+  ["https://anidap.se/home", "r"]
 ]
