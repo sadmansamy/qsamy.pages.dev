@@ -35,6 +35,7 @@
             width: 100%;
             height: auto;
             display: block;
+            margin-bottom: 2px; /* Slight gap between multiple images */
         }
     </style>
 </head>
@@ -44,28 +45,30 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            
-            // Updated to fetch aaa_imagelist.json
             fetch('aaa_imagelist.json')
                 .then(response => response.json())
-                .then(photos => {
+                .then(posts => {
                     const feedContainer = document.getElementById('feed');
 
-                    photos.forEach(photo => {
+                    posts.forEach(post => {
                         const postDiv = document.createElement('div');
                         postDiv.className = 'post';
 
+                        // Create the name header
                         const nameDiv = document.createElement('div');
                         nameDiv.className = 'photo-name';
-                        nameDiv.textContent = photo.name;
-
-                        const img = document.createElement('img');
-                        img.src = photo.url;
-                        img.alt = photo.name;
-                        img.className = 'photo-img';
-
+                        nameDiv.textContent = post.name;
                         postDiv.appendChild(nameDiv);
-                        postDiv.appendChild(img);
+
+                        // Loop through all images for this post
+                        post.images.forEach(imageUrl => {
+                            const img = document.createElement('img');
+                            img.src = imageUrl;
+                            img.alt = post.name;
+                            img.className = 'photo-img';
+                            img.loading = 'lazy'; // Enables native lazy loading
+                            postDiv.appendChild(img);
+                        });
 
                         feedContainer.appendChild(postDiv);
                     });
