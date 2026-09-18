@@ -1,8 +1,20 @@
 [
   {
+    "name": "Meter Application and Information",
+    "images": [
+      "https://qsamy.pages.dev/bill/application.jpg","https://qsamy.pages.dev/bill/application.pdf","https://qsamy.pages.dev/bill/header.jpg"
+    ]
+  },
+  {
+    "name": "Bill of August 2026",
+    "images": [
+      "https://qsamy.pages.dev/bill/b202608_a.jpg","https://qsamy.pages.dev/bill/b202608_b.jpg"
+    ]
+  },
+  {
     "name": "January 2026 Electricity Bill Copy",
     "images": [
       "https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=800"
     ]
-  }
+  },
 ]
