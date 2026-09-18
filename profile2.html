@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- SEO Optimization -->
+    <link rel="canonical" href="https://samy.nav.bd/" />
+
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <title>qsamy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-color: #05070a;
+            --terminal-dark: #0a0e14;
+            --neon-green: #00ff66;
+            --neon-cyan: #00f0ff;
+            --text-main: #e2e8f0;
+            --text-muted: #64748b;
+            --border-glow: rgba(0, 255, 102, 0.15);
+            --border-color: rgba(255, 255, 255, 0.05);
+            
+            /* Brand Color Overrides for Dark Matrix UI */
+            --wa-color: #25D366;
+            --phone-color: #00f0ff;
+            --fb-color: #1877F2;
+            --ig-color: #E4405F;
+            --x-color: #ffffff;
+            --yt-color: #FF0000;
+            --mail-color: #f59e0b;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            font-family: 'Fira Code', monospace;
+            color: var(--text-main);
+            min-height: 100vh;
+            box-sizing: border-box;
+            overflow-x: hidden;
+        }
+
+        /* --- UNIQUE MODERN HACKING LOADING SEQUENCE --- */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #030508;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Fira Code', monospace;
+            transition: opacity 0.5s ease, visibility 0.5s;
+        }
+
+        .loader-terminal {
+            width: 90%;
+            max-width: 500px;
+            background: #070a12;
+            border: 1px solid var(--neon-green);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 30px rgba(0, 255, 102, 0.2);
+            box-sizing: border-box;
+        }
+
+        .loader-header {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid rgba(0, 255, 102, 0.2);
+            padding-bottom: 8px;
+            color: var(--neon-green);
+            font-size: 12px;
+        }
+
+        .dot { width: 8px; height: 8px; border-radius: 50%; background: #ef4444; }
+        .dot:nth-child(2) { background: #eab308; }
+        .dot:nth-child(3) { background: #22c55e; }
+
+        .loader-lines {
+            font-size: 13px;
+            color: var(--neon-green);
+            min-height: 100px;
+            line-height: 1.6;
+        }
+
+        .progress-bar-container {
+            width: 100%;
+            background: rgba(255,255,255,0.05);
+            height: 4px;
+            margin-top: 15px;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            width: 0%;
+            height: 100%;
+            background: linear-gradient(90deg, var(--neon-green), var(--neon-cyan));
+            transition: width 0.1s linear;
+        }
+
+        /* --- MAIN UI LAYOUT --- */
+        .terminal-layout {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            gap: 24px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .terminal-layout.loaded {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Glitch Interface Panels */
+        .hacker-panel {
+            background: var(--terminal-dark);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 32px 24px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.6);
+        }
+
+        .hacker-panel::before {
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 0; left: 0; bottom: 0; right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            z-index: 2;
+            background-size: 100% 3px, 6px 100%;
+            pointer-events: none;
+        }
+
+        /* Scanline HUD effect */
+        .hud-tag {
+            position: absolute;
+            top: 12px;
+            right: 16px;
+            font-size: 10px;
+            text-transform: uppercase;
+            color: var(--neon-cyan);
+            letter-spacing: 2px;
+            opacity: 0.5;
+        }
+
+        /* Profile details */
+        .avatar-frame {
+            position: relative;
+            width: 130px;
+            height: 130px;
+            margin: 0 auto 20px;
+        }
+
+        .avatar-frame::after {
+            content: '';
+            position: absolute;
+            top: -6px; left: -6px; right: -6px; bottom: -6px;
+            border: 2px dashed var(--neon-green);
+            border-radius: 50%;
+            animation: spin 20s linear infinite;
+        }
+
+        .profile-avatar {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--terminal-dark);
+        }
+
+        .profile-name {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 26px;
+            font-weight: 800;
+            margin: 0;
+            letter-spacing: -0.5px;
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(255,255,255,0.1);
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(0, 255, 102, 0.06);
+            border: 1px solid rgba(0, 255, 102, 0.3);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            color: var(--neon-green);
+            margin: 12px 0 24px;
+            text-transform: uppercase;
+        }
+
+        .status-dot {
+            width: 6px;
+            height: 6px;
+            background: var(--neon-green);
+            border-radius: 50%;
+            animation: blink 1.5s infinite;
+        }
+
+        /* UI Controls */
+        .fb-action-bar {
+            display: flex;
+            width: 100%;
+            gap: 12px;
+        }
+
+        .fb-btn-primary {
+            flex: 1;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            height: 48px;
+            background: transparent;
+            color: var(--neon-green);
+            border: 1px solid var(--neon-green);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 13px;
+            transition: all 0.2s ease;
+            box-shadow: 0 0 10px rgba(0, 255, 102, 0.1);
+        }
+
+        .fb-btn-primary:hover {
+            background: var(--neon-green);
+            color: var(--bg-color);
+            box-shadow: 0 0 20px rgba(0, 255, 102, 0.4);
+        }
+
+        .fb-btn-secondary {
+            width: 48px;
+            height: 48px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+            color: var(--neon-cyan);
+            border: 1px solid var(--neon-cyan);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .fb-btn-secondary:hover {
+            background: var(--neon-cyan);
+            color: var(--bg-color);
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+        }
+
+        /* Right Panel Cards */
+        .right-pane {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .section-title {
+            font-size: 13px;
+            color: var(--neon-cyan);
+            text-transform: uppercase;
+            margin-top: 0;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .terminal-text {
+            font-size: 13px;
+            line-height: 1.6;
+            color: var(--text-main);
+            margin: 0;
+        }
+
+        .system-specs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            font-size: 11px;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+            padding-top: 14px;
+            margin-top: 14px;
+        }
+
+        /* Directory Nodes / Dynamic Links Grid */
+        .links-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .contact-box {
+            display: flex;
+            align-items: center;
+            padding: 14px 16px;
+            background: rgba(255,255,255,0.01);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        
+        .contact-box .brand-icon {
+            font-size: 18px;
+            width: 30px;
+            color: var(--text-muted);
+        }
+
+        .contact-box .brand-icon svg {
+            width: 16px;
+            height: 16px;
+            fill: var(--text-muted);
+        }
+
+        .button-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .label {
+            font-size: 10px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+
+        .value {
+            font-size: 12px;
+            font-weight: 500;
+            color: #ffffff;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 140px;
+        }
+
+        /* High-tech Hover Triggers */
+        .contact-box:hover {
+            background: rgba(255,255,255,0.03);
+            transform: translateX(4px);
+        }
+
+        .phone:hover { border-color: var(--phone-color); }
+        .phone:hover .brand-icon { color: var(--phone-color); }
+        .wa:hover { border-color: var(--wa-color); }
+        .wa:hover .brand-icon { color: var(--wa-color); }
+        .fb:hover { border-color: var(--fb-color); }
+        .fb:hover .brand-icon { color: var(--fb-color); }
+        .ig:hover { border-color: var(--ig-color); }
+        .ig:hover .brand-icon { color: var(--ig-color); }
+        .x-site:hover { border-color: #fff; }
+        .x-site:hover .brand-icon svg { fill: #fff; }
+        .yt:hover { border-color: var(--yt-color); }
+        .yt:hover .brand-icon { color: var(--yt-color); }
+        .mail:hover { border-color: var(--mail-color); }
+        .mail:hover .brand-icon { color: var(--mail-color); }
+
+        /* Keyframes */
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+        @keyframes blink { 0%, 100% { opacity: 0; } 50% { opacity: 1; } }
+
+        /* Responsive UI */
+        @media screen and (max-width: 768px) {
+            .terminal-layout {
+                grid-template-columns: 1fr;
+                margin: 20px auto;
+            }
+            .links-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- UNIQUE LOADING MATRIX TERMINAL SECTION -->
+    <div id="loading-screen">
+        <div class="loader-terminal">
+            <div class="loader-header">
+                <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+                <span style="margin-left: 10px;">SAMY_OS v4.0.1-CORE</span>
+            </div>
+            <div class="loader-lines" id="terminal-logs"></div>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="load-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN DASHBOARD (HIDDEN UNTIL LOADED) -->
+    <div class="terminal-layout" id="main-ui">
+        
+        <!-- Left Tactical Module -->
+        <div class="hacker-panel">
+            <div class="hud-tag">SECURE-NODE</div>
+            <div class="avatar-frame">
+                <img class="profile-avatar" src="https://blogger.googleusercontent.com/img/a/AVvXsEi7x_YrBwRo0uBt9ZxzI4ZPN-nI-TlzV_4zbd-iAjh-7GflYvO3rT-PyMz9oaFEonIvUgy-wKcW8uhoGqMHTKkmErzudJFg-I7B3lytJGYaAHhKsGWBLUOcB51FPmS2JZk2Mm2F9b7J13mPF48s9z4xLl9K9L2ODrkk5pWCJPrcIvsGmL7KYZlMUbrYBqqv" alt="Sadman Samy Profile">
+            </div>
+            <h1 class="profile-name">SADMAN SAMY</h1>
+            
+            <div class="status-badge">
+                <div class="status-dot"></div> Node: Online
+            </div>
+            
+            <div class="fb-action-bar">
+                <a href="sadman_samy.vcf" download="Sadman_Samy.vcf" class="fb-btn-primary">
+                    <i class="fa-solid fa-terminal"></i> Get VCard
+                </a>
+                <button class="fb-btn-secondary" id="nativeShareBtn" title="Broadcast Module">
+                    <i class="fa-solid fa-satellite-dish"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Right Terminal Modules -->
+        <div class="right-pane">
+            
+            <!-- Indexable Distinct Content Node -->
+            <div class="hacker-panel">
+                <div class="hud-tag">SYS-INF</div>
+                <h2 class="section-title"><i class="fa-solid fa-angle-right"></i> Terminal Profile</h2>
+                <p class="terminal-text">
+                    Decentralized communication array initialized. I monitor data nodes, digital footprints, and deployment infrastructures out of Konabari, Gazipur, Bangladesh. Connect directly via the cryptographic access points configured below.
+                </p>
+                <div class="system-specs">
+                    <div>LOC: 23.9998° N, 90.3248° E</div>
+                    <div>ENC: TLS_AES_256_GCM</div>
+                </div>
+            </div>
+
+            <!-- Access Points Grid -->
+            <div class="hacker-panel">
+                <div class="hud-tag">DIR-NODES</div>
+                <h2 class="section-title"><i class="fa-solid fa-network-wired"></i> Cryptographic Endpoints</h2>
+                <div class="links-grid">
+                    <a class="contact-box phone" href="tel:+8801611689999">
+                        <div class="brand-icon"><i class="fa-solid fa-headset"></i></div>
+                        <div class="button-text">
+                            <span class="label">Comms-Line</span>
+                            <span class="value">01611689999</span>
+                        </div>
+                    </a>
+
+                    <a class="contact-box wa" href="https://wa.me/8801611689999" target="_blank">
+                        <div class="brand-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                        <div class="button-text">
+                            <span class="label">Secure-Chat</span>
+                            <span class="value">WhatsApp</span>
+                        </div>
+                    </a>
+
+                    <a class="contact-box fb" href="https://facebook.com/sadmansamyy" target="_blank">
+                        <div class="brand-icon"><i class="fa-brands fa-facebook-f"></i></div>
+                        <div class="button-text">
+                            <span class="label">Social-Node</span>
+                            <span class="value">Facebook</span>
+                        </div>
+                    </a>
+
+                    <a class="contact-box ig" href="https://instagram.com/sadmansamyy" target="_blank">
+                        <div class="brand-icon"><i class="fa-brands fa-instagram"></i></div>
+                        <div class="button-text">
+                            <span class="label">Visual-Feed</span>
+                            <span class="value">Instagram</span>
+                        </div>
+                    </a>
+
+                    <a class="contact-box x-site" href="https://x.com/sadmansamyy" target="_blank">
+                        <div class="brand-icon">
+                            <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+                        </div>
+                        <div class="button-text">
+                            <span class="label">Intel-Feed</span>
+                            <span class="value">X (Twitter)</span>
+                        </div>
+                    </a>
+
+                    <a class="contact-box yt" href="https://youtube.com/@sadmansamyy" target="_blank">
+                        <div class="brand-icon"><i class="fa-brands fa-youtube"></i></div>
+                        <div class="button-text">
+                            <span class="label">Stream-Node</span>
+                            <span class="value">YouTube</span>
+                        </div>
+                    </a>
+
+                    <a class="contact-box mail" href="mailto:i@samy.pro.bd">
+                        <div class="brand-icon"><i class="fa-regular fa-envelope"></i></div>
+                        <div class="button-text">
+                            <span class="label">Mainframe-Mail</span>
+                            <span class="value">i@samy.pro.bd</span>
+                        </div>
+                    </a>
+
+                    <a class="contact-box mail" href="mailto:sadmansamyy@gmail.com">
+                        <div class="brand-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
+                        <div class="button-text">
+                            <span class="label">Backup-Mail</span>
+                            <span class="value">sadmansamyy</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // --- UNIQUE SEQUENTIAL TERMINAL LOADING SCRIPT ---
+        const logs = [
+            "Initializing handshake protocol...",
+            "Connecting to remote target samy.nav.bd...",
+            "Bypassing sandbox environments...",
+            "Loading cryptographic access keys...",
+            "Access Granted. Mapping HUD interface..."
+        ];
+        
+        let currentLogIndex = 0;
+        let progress = 0;
+        const logContainer = document.getElementById("terminal-logs");
+        const progressBar = document.getElementById("load-progress");
+
+        function runHackingLoader() {
+            if (currentLogIndex < logs.length) {
+                const line = document.createElement("div");
+                line.innerHTML = `> <span style="color:#00f0ff;">[SYS]</span> ${logs[currentLogIndex]}`;
+                logContainer.appendChild(line);
+                currentLogIndex++;
+                
+                progress += 20;
+                progressBar.style.width = `${progress}%`;
+                
+                setTimeout(runHackingLoader, 400); 
+            } else {
+                // Finalize sequence and reveal UI cleanly
+                setTimeout(() => {
+                    const loader = document.getElementById("loading-screen");
+                    const mainUI = document.getElementById("main-ui");
+                    
+                    loader.style.opacity = "0";
+                    loader.style.visibility = "hidden";
+                    mainUI.classList.add("loaded");
+                }, 300);
+            }
+        }
+
+        // Trigger dynamic loader on payload initialization
+        window.addEventListener("DOMContentLoaded", runHackingLoader);
+
+        // Native System Share Module
+        document.getElementById('nativeShareBtn').addEventListener('click', async () => {
+            if (navigator.share) {
+                try {
+                    await navigator.share({
+                        title: 'SADMAN SAMY',
+                        text: 'Decrypted gateway endpoint for Sadman Samy.',
+                        url: window.location.href
+                    });
+                } catch (err) {
+                    console.log('Broadcast error:', err);
+                }
+            } else {
+                navigator.clipboard.writeText(window.location.href);
+                alert('Endpoint string saved to temporary buffer (Clipboard).');
+            }
+        });
+
+                // Intergram Widget Custom Matrix Style Configuration
+        window.intergramId = "6003288214"; 
+        window.intergramCustomizations = {
+            titleClosed: 'Establish Comms',
+            titleOpen: 'Secure Channel Terminal',
+            introMessage: 'Encryption Active. Transit your live transmission directly to Samy.',
+            autoResponse: 'Data packet sent. Keep channel open for a return signal.',
+            mainColor: '#00aa44', // Updated to Matrix Green
+            alwaysUseFloatingButton: true 
+        };
+
+    </script>
+    <script id="intergram" type="text/javascript" src="https://www.intergram.xyz/js/widget.js"></script>
+</body>
+</html>
