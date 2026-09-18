@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Qsamy || Bill</title>
+    <title>Pally Bidyut Photos</title>
     <style>
         body {
             margin: 0;
@@ -12,71 +12,133 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
 
-        #feed {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 10px 0;
+        /* Fixed Top Header */
+        header {
+            position: sticky;
+            top: 0;
+            background-color: #0056b3;
+            color: #ffffff;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+            z-index: 1000;
         }
 
+        header h1 {
+            margin: 0;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        header p {
+            margin: 5px 0 0 0;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 15px 10px;
+        }
+
+        /* Section Titles */
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #1c1e21;
+            margin: 20px 0 10px 0;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #0056b3;
+        }
+
+        /* Post Card Styling */
         .post {
             background-color: #ffffff;
             margin-bottom: 15px;
-            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         }
 
         .photo-name {
-            padding: 15px;
-            font-weight: bold;
-            font-size: 16px;
+            padding: 12px 15px;
+            font-weight: 600;
+            font-size: 15px;
             color: #1c1e21;
+            background-color: #f8f9fa;
+            border-bottom: 1px solid #eee;
         }
 
         .photo-img {
             width: 100%;
             height: auto;
             display: block;
-            margin-bottom: 2px; /* Slight gap between multiple images */
+            margin-bottom: 2px;
         }
     </style>
 </head>
 <body>
 
-    <div id="feed"></div>
+    <!-- Header Section -->
+    <header>
+        <h1>Pally Bidyut (Postpaid)</h1>
+        <p>1060065233509</p>
+    </header>
+
+    <div class="container">
+        <!-- Main Section: Receipts -->
+        <div class="section-title">Receipts</div>
+        <div id="receipts-feed"></div>
+
+        <!-- Secondary Section: Bill & Other -->
+        <div class="section-title">Bill & Other</div>
+        <div id="bill-feed"></div>
+    </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            fetch('aaa_imagelist.json')
+        // Helper function to render a post list into a target element
+        function renderFeed(jsonFile, containerId) {
+            fetch(jsonFile)
                 .then(response => response.json())
                 .then(posts => {
-                    const feedContainer = document.getElementById('feed');
+                    const container = document.getElementById(containerId);
 
                     posts.forEach(post => {
                         const postDiv = document.createElement('div');
                         postDiv.className = 'post';
 
-                        // Create the name header
+                        // Photo Name / Caption Header
                         const nameDiv = document.createElement('div');
                         nameDiv.className = 'photo-name';
                         nameDiv.textContent = post.name;
                         postDiv.appendChild(nameDiv);
 
-                        // Loop through all images for this post
+                        // Images Loop
                         post.images.forEach(imageUrl => {
                             const img = document.createElement('img');
                             img.src = imageUrl;
                             img.alt = post.name;
                             img.className = 'photo-img';
-                            img.loading = 'lazy'; // Enables native lazy loading
+                            img.loading = 'lazy';
                             postDiv.appendChild(img);
                         });
 
-                        feedContainer.appendChild(postDiv);
+                        container.appendChild(postDiv);
                     });
                 })
                 .catch(error => {
-                    console.error('Error loading photos:', error);
-                    document.getElementById('feed').innerHTML = '<p style="text-align:center;">Could not load photos.</p>';
+                    console.error(`Error loading ${jsonFile}:`, error);
+                    document.getElementById(containerId).innerHTML = '<p style="text-align:center; color:#666;">No items found.</p>';
                 });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Load main receipt feed
+            renderFeed('aaa_imagelist.json', 'receipts-feed');
+
+            // Load bill & other feed
+            renderFeed('aaa_billandother.json', 'bill-feed');
         });
     </script>
 </body>
