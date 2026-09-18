@@ -168,7 +168,6 @@
     </div>
 
     <script>
-        // Switch between side-by-side views
         function switchTab(tabId) {
             document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
             document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
@@ -182,14 +181,13 @@
             }
         }
 
-        // Render posts from JSON
         function renderFeed(jsonFile, containerId) {
             fetch(jsonFile)
                 .then(response => response.json())
                 .then(posts => {
                     const container = document.getElementById(containerId);
 
-                    if (posts.length === 0) {
+                    if (!posts || posts.length === 0) {
                         container.innerHTML = '<div class="empty-message">No images available.</div>';
                         return;
                     }
@@ -206,12 +204,25 @@
                         const imgContainer = document.createElement('div');
                         imgContainer.className = 'photo-container';
 
+                        let validImagesCount = post.images.length;
+
                         post.images.forEach(imageUrl => {
                             const img = document.createElement('img');
                             img.src = imageUrl;
                             img.alt = post.name;
                             img.className = 'photo-img';
                             img.loading = 'lazy';
+
+                            // Automatically hide post if the image is missing/not uploaded yet
+                            img.onerror = () => {
+                                img.style.display = 'none';
+                                validImagesCount--;
+                                // If all images in this post failed to load, hide the post container
+                                if (validImagesCount === 0) {
+                                    postDiv.style.display = 'none';
+                                }
+                            };
+
                             imgContainer.appendChild(img);
                         });
 
@@ -226,7 +237,6 @@
         }
 
         document.addEventListener('DOMContentLoaded', () => {
-            // Updated file names
             renderFeed('aa_receipts.json', 'receipts');
             renderFeed('aa_others.json', 'others');
         });
