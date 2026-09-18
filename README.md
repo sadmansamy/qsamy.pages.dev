@@ -1,1 +1,0 @@
-# qsamy.pages.dev
