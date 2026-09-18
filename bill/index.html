@@ -157,14 +157,14 @@
         <!-- Segmented Tab Switcher -->
         <div class="tab-switcher">
             <button class="tab-btn active" onclick="switchTab('receipts')">Receipts</button>
-            <button class="tab-btn" onclick="switchTab('bills')">Bill & Other</button>
+            <button class="tab-btn" onclick="switchTab('others')">Others</button>
         </div>
 
         <!-- Panel 1: Receipts -->
         <div id="receipts" class="tab-panel active"></div>
 
-        <!-- Panel 2: Bill & Other -->
-        <div id="bills" class="tab-panel"></div>
+        <!-- Panel 2: Others -->
+        <div id="others" class="tab-panel"></div>
     </div>
 
     <script>
@@ -178,7 +178,7 @@
                 document.getElementById('receipts').classList.add('active');
             } else {
                 document.querySelectorAll('.tab-btn')[1].classList.add('active');
-                document.getElementById('bills').classList.add('active');
+                document.getElementById('others').classList.add('active');
             }
         }
 
@@ -226,8 +226,9 @@
         }
 
         document.addEventListener('DOMContentLoaded', () => {
-            renderFeed('aaa_imagelist.json', 'receipts');
-            renderFeed('aaa_billandother.json', 'bills');
+            // Updated file names
+            renderFeed('aa_receipts.json', 'receipts');
+            renderFeed('aa_others.json', 'others');
         });
     </script>
 </body>
