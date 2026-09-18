@@ -3,142 +3,231 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pally Bidyut Photos</title>
+    <title>Pally Bidyut Portal</title>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #f0f2f5;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        :root {
+            --primary-color: #2563eb;
+            --primary-hover: #1d4ed8;
+            --bg-color: #f1f5f9;
+            --card-bg: #ffffff;
+            --text-primary: #0f172a;
+            --text-secondary: #64748b;
+            --border-radius: 16px;
         }
 
-        /* Fixed Top Header */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
+            color: var(--text-primary);
+            padding-bottom: 30px;
+        }
+
+        /* Modern App Header */
         header {
             position: sticky;
             top: 0;
-            background-color: #0056b3;
-            color: #ffffff;
-            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 16px 20px;
             text-align: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
             z-index: 1000;
         }
 
         header h1 {
-            margin: 0;
-            font-size: 20px;
-            font-weight: bold;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: -0.3px;
         }
 
         header p {
-            margin: 5px 0 0 0;
-            font-size: 14px;
-            opacity: 0.9;
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-top: 2px;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            letter-spacing: 0.5px;
         }
 
         .container {
-            max-width: 600px;
+            max-width: 500px;
             margin: 0 auto;
-            padding: 15px 10px;
+            padding: 16px;
         }
 
-        /* Section Titles */
-        .section-title {
-            font-size: 18px;
-            font-weight: bold;
-            color: #1c1e21;
-            margin: 20px 0 10px 0;
-            padding-bottom: 5px;
-            border-bottom: 2px solid #0056b3;
+        /* Modern Tab Switcher */
+        .tab-switcher {
+            display: flex;
+            background-color: #e2e8f0;
+            padding: 4px;
+            border-radius: 12px;
+            margin-bottom: 20px;
         }
 
-        /* Post Card Styling */
+        .tab-btn {
+            flex: 1;
+            padding: 10px 0;
+            border: none;
+            background: transparent;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            border-radius: 9px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .tab-btn.active {
+            background-color: var(--card-bg);
+            color: var(--primary-color);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        }
+
+        /* View Panels */
+        .tab-panel {
+            display: none;
+        }
+
+        .tab-panel.active {
+            display: block;
+            animation: fadeIn 0.25s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(4px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Modern Card Design */
         .post {
-            background-color: #ffffff;
-            margin-bottom: 15px;
-            border-radius: 8px;
+            background-color: var(--card-bg);
+            margin-bottom: 20px;
+            border-radius: var(--border-radius);
             overflow: hidden;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+            border: 1px solid #e2e8f0;
         }
 
         .photo-name {
-            padding: 12px 15px;
+            padding: 14px 16px;
             font-weight: 600;
             font-size: 15px;
-            color: #1c1e21;
-            background-color: #f8f9fa;
-            border-bottom: 1px solid #eee;
+            color: var(--text-primary);
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .photo-container {
+            background-color: #f8fafc;
+            padding: 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
         }
 
         .photo-img {
             width: 100%;
             height: auto;
             display: block;
-            margin-bottom: 2px;
+            border-radius: 10px;
+        }
+
+        .empty-message {
+            text-align: center;
+            color: var(--text-secondary);
+            padding: 40px 0;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
 
-    <!-- Header Section -->
+    <!-- Header -->
     <header>
         <h1>Pally Bidyut (Postpaid)</h1>
         <p>1060065233509</p>
     </header>
 
     <div class="container">
-        <!-- Main Section: Receipts -->
-        <div class="section-title">Receipts</div>
-        <div id="receipts-feed"></div>
+        <!-- Segmented Tab Switcher -->
+        <div class="tab-switcher">
+            <button class="tab-btn active" onclick="switchTab('receipts')">Receipts</button>
+            <button class="tab-btn" onclick="switchTab('bills')">Bill & Other</button>
+        </div>
 
-        <!-- Secondary Section: Bill & Other -->
-        <div class="section-title">Bill & Other</div>
-        <div id="bill-feed"></div>
+        <!-- Panel 1: Receipts -->
+        <div id="receipts" class="tab-panel active"></div>
+
+        <!-- Panel 2: Bill & Other -->
+        <div id="bills" class="tab-panel"></div>
     </div>
 
     <script>
-        // Helper function to render a post list into a target element
+        // Switch between side-by-side views
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
+
+            if (tabId === 'receipts') {
+                document.querySelectorAll('.tab-btn')[0].classList.add('active');
+                document.getElementById('receipts').classList.add('active');
+            } else {
+                document.querySelectorAll('.tab-btn')[1].classList.add('active');
+                document.getElementById('bills').classList.add('active');
+            }
+        }
+
+        // Render posts from JSON
         function renderFeed(jsonFile, containerId) {
             fetch(jsonFile)
                 .then(response => response.json())
                 .then(posts => {
                     const container = document.getElementById(containerId);
 
+                    if (posts.length === 0) {
+                        container.innerHTML = '<div class="empty-message">No images available.</div>';
+                        return;
+                    }
+
                     posts.forEach(post => {
                         const postDiv = document.createElement('div');
                         postDiv.className = 'post';
 
-                        // Photo Name / Caption Header
                         const nameDiv = document.createElement('div');
                         nameDiv.className = 'photo-name';
                         nameDiv.textContent = post.name;
                         postDiv.appendChild(nameDiv);
 
-                        // Images Loop
+                        const imgContainer = document.createElement('div');
+                        imgContainer.className = 'photo-container';
+
                         post.images.forEach(imageUrl => {
                             const img = document.createElement('img');
                             img.src = imageUrl;
                             img.alt = post.name;
                             img.className = 'photo-img';
                             img.loading = 'lazy';
-                            postDiv.appendChild(img);
+                            imgContainer.appendChild(img);
                         });
 
+                        postDiv.appendChild(imgContainer);
                         container.appendChild(postDiv);
                     });
                 })
                 .catch(error => {
                     console.error(`Error loading ${jsonFile}:`, error);
-                    document.getElementById(containerId).innerHTML = '<p style="text-align:center; color:#666;">No items found.</p>';
+                    document.getElementById(containerId).innerHTML = '<div class="empty-message">Failed to load content.</div>';
                 });
         }
 
         document.addEventListener('DOMContentLoaded', () => {
-            // Load main receipt feed
-            renderFeed('aaa_imagelist.json', 'receipts-feed');
-
-            // Load bill & other feed
-            renderFeed('aaa_billandother.json', 'bill-feed');
+            renderFeed('aaa_imagelist.json', 'receipts');
+            renderFeed('aaa_billandother.json', 'bills');
         });
     </script>
 </body>
