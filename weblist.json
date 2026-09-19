@@ -1,0 +1,62 @@
+[
+  {
+    "name": "YouTube",
+    "url": "https://www.youtube.com",
+    "img": "https://play-lh.googleusercontent.com/QNmuZQc9I6Zbe3mWnSr0hycnENqGFCI5p3yE29Hkxtf22T0IWS6zTrpxULLyyjWpB7ONAXDsDQXnXcVWokl3eg"
+  },
+  {
+    "name": "Facebook",
+    "url": "https://www.facebook.com",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi4vO2Y-AGLtKgHyDDkLZFFm20amIgrEs2sCVu4K7x3g&s=10"
+  },
+  {
+    "name": "GitHub",
+    "url": "https://github.com",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYiNfOOXHpGjJKcar9wAazLY4yk72qagpeCyYM6vQbZA&s=10"
+  },
+  {
+    "name": "Sflix",
+    "url": "https://sflix.film/",
+    "img": "https://samy.nav.bd/img/sflix.film.png"
+  },
+  {
+    "name": "Samy",
+    "url": "https://samy.pro.bd/home",
+    "img": "https://samy.pro.bd/favicon.ico"
+  },
+  {
+    "name": "TBCPL",
+    "url": "https://tbcpl.lol/",
+    "img": "https://samy.nav.bd/img/22.png"
+  },
+  {
+    "name": "Local Weblist",
+    "url": "https://3.s33.pages.dev",
+    "img": "https://samy.pro.bd/p/svg/local.svg"
+  },
+{
+    "name": "Weblist 2",
+    "url": "https://samy.nav.bd/2",
+    "img": "https://samy.pro.bd/p/svg/weblist2.svg"
+  },
+  {
+    "name": "APP",
+    "url": "https://samy.nav.bd/app",
+    "img": "https://samy.pro.bd/p/svg/app.svg"
+  },
+  {
+    "name": "IMG",
+    "url": "https://samy.nav.bd/img",
+    "img": "https://samy.pro.bd/p/svg/img.svg"
+  },
+  {
+    "name": "TBCPL",
+    "url": "https://tbcpl.lol/",
+    "img": "https://samy.nav.bd/img/22.png"
+  },
+  {
+    "name": "Local Weblist",
+    "url": "https://3.s33.pages.dev",
+    "img": "https://samy.pro.bd/p/svg/local.svg"
+  }
+]

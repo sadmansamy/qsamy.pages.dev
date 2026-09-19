@@ -1,0 +1,647 @@
+[
+  {
+        "name": "F-Droid APKs"
+    },
+    {
+        "name": "OuterTune",
+        "dis": "A Material Design YouTube Music client for Android.",
+        "img": "https://samy.nav.bd/img/19.png",
+        "urls": [
+            "https://f-droid.org/packages/com.dd3boh.outertune",
+            "https://outertune.github.io/",
+            "https://github.com/OuterTune/OuterTune"
+        ]
+    },
+    {
+        "name": "SimpMusic",
+        "dis": "A FOSS YouTube Music client for Android and Desktop with many features from Spotify, SponsorBlock, ReturnYouTubeDislike using Compose Multiplatform to develop.",
+        "img": "https://f-droid.org/repo/com.maxrave.simpmusic/en-US/icon_NyVM4inJWSfXS6E9jGgs44E0SjRGG5FlWy-EWV6XlEo=.png",
+        "urls": [
+            "https://f-droid.org/packages/com.maxrave.simpmusic",
+            "https://github.com/maxrave-dev/SimpMusic/releases",
+            "https://www.simpmusic.org/"
+        ]
+    },
+    {
+        "name": "ReFra",
+        "dis": "ReFra is a modern, open-source media gallery for Android built with Jetpack Compose. It refracts how you browse, organize, and experience your photos and videos — with AI-powered categories, panorama viewing, motion photo playback, video casting, and a fully customizable Material 3 interface.",
+        "img": "https://f-droid.org/repo/com.dot.gallery/en-US/icon_poVCaExXhiJa_kRsVGmCdIjXXmHG-YkJtckk9SjiFHs=.png",
+        "urls": [
+            "https://f-droid.org/packages/com.dot.gallery",
+            "https://github.com/IacobIonut01/ReFra/releases/tag/5.0.3"
+        ]
+    },
+    {
+        "name": "Round Sync",
+        "dis": "Round Sync is a cloud file manager, powered by rclone. It is a versatile android application that makes use of the venerable Rclone. This allows you to interact with all your favorite Cloud-Providers in an easy-to-use app! We even allow you to automate some of the more tedious tasks!",
+        "img": "https://samy.nav.bd/img/24.png",
+        "urls": [
+            "https://f-droid.org/packages/de.felixnuesse.extract",
+            "https://github.com/newhinton/Round-Sync/releases"
+        ]
+    },
+    {
+        "name": "Droid-ify",
+        "dis": "Browse and install open-source apps from F-Droid repositories with a clean, modern interface",
+        "img": "https://f-droid.org/repo/com.looker.droidify/en-US/icon_lApsnfhrMqGkCaW-IdnYwx86CUjdTutncPvXPJythaM=.png",
+        "urls": [
+            "https://f-droid.org/packages/com.looker.droidify",
+            "https://github.com/Droid-ify/client",
+            "https://droidify.app/"
+        ]
+    },
+{
+    "name": "Copy SMS Code",
+    "dis": "An open-source application that allows you to copy OTP and codes from SMS and notifications automatically by reading all of your notifications.  The application works completely offline and without internet permission. So you can be rest assured that your data does not leave your device.",
+    "img": "https://f-droid.org/repo/io.github.jd1378.otphelper/en-US/icon_P77zVQteXEl7-WKpHtSqMa0QvSxG1-ymcUd0HxJsFN4=.png",
+    "urls": [
+      "https://f-droid.org/packages/io.github.jd1378.otphelper",
+      "https://github.com/jd1378/otphelper/releases"
+    ]
+  },
+    {
+        "name": "APKs"
+    },
+    {
+        "name": "F-Droid",
+        "dis": "F-Droid is the app distribution ecosystem for Android where your user freedom comes first. Discover our app store, explore the world of free and open source (FOSS) apps.",
+        "img": "https://avatars.githubusercontent.com/u/8239603?s=200&v=4",
+        "urls": [
+            "https://f-droid.org/F-Droid.apk",
+            "https://f-droid.org/"
+        ]
+    },
+{
+        "name": "YTDLnis",
+        "dis": "An advanced YouTube downloader for Android with support for many formats.",
+        "img": "https://raw.githubusercontent.com/deniscerri/ytdlnis/main/fastlane/metadata/android/en-US/images/icon.png",
+        "urls": [
+            "https://github.com/deniscerri/ytdlnis"
+        ]
+    },
+    {
+        "name": "WebToApp",
+        "dis": "",
+        "img": "https://raw.githubusercontent.com/shiaho777/web-to-app/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+        "urls": [
+            "https://github.com/shiaho777/web-to-app"
+        ]
+    },
+    {
+        "name": "Caller Info",
+        "dis": "CallerInfo is an Android application that provides real-time Caller ID functionalities by seamlessly integrating with the Telegram Caller ID bot (@TrueCalleRobot)",
+        "img": "https://samy.nav.bd/img/20.png",
+        "urls": [
+            "https://github.com/rakibulcodes/caller-info"
+        ]
+    },
+    {
+        "name": "Orion Store",
+        "dis": "A transparent app store built around public releases, inspectable metadata, and automation you can actually follow. Especially it is very helpful for finding mod APK.",
+        "img": "https://samy.nav.bd/img/18.png",
+        "urls": [
+            "https://github.com/RookieEnough/Orion-Store/releases"
+        ]
+    },
+    {
+        "name": "PixelPlayer",
+        "dis": "A beautiful, feature-rich music player for Android Built with Jetpack Compose and Material Design 3",
+        "img": "https://raw.githubusercontent.com/PixelPlayerHQ/PixelPlayer/master/assets/icon.png",
+        "urls": [
+            "https://github.com/PixelPlayerHQ/PixelPlayer/releases"
+        ]
+    },
+    {
+        "name": "Nosved Player",
+        "dis": "Nosved Player is a high-performance, native Android video player built with a focus on absolute playback smoothness, clean aesthetics, and extensive user customization.",
+        "img": "https://devson1024.github.io/assets/NosvedPlayer_icon.png",
+        "urls": [
+            "https://github.com/DevSon1024/Nosved-Player/releases",
+            "https://github.com/DevSon1024/Nosved-Player-Lite/releases"
+        ]
+    },
+    {
+        "name": "Mod APKs"
+    },
+    {
+        "name": "RBMods / RockMods",
+        "dis": "A mod APK downloading website",
+        "img": "https://samy.nav.bd/img/38.png",
+        "urls": [
+            "https://www.rockmods.net/",
+            "https://t.me/RBMods",
+            "https://t.me/+VS0Rv2nT_YE2M2Nl"
+        ]
+    },
+    {
+        "name": "CamScanner",
+        "dis": "",
+        "img": "https://play-lh.googleusercontent.com/XSoqEDquJuenUosbMN_EA2n2U5lsomPEUdCKj4j9bUdPfdWMCtRqXlyPgQ6zxQxWaDFIXrqbqyFjwXQ5FMYubw",
+        "urls": [
+            "https://www.rockmods.net/search?q=camscanner"
+        ]
+    },
+
+{
+    "name": "Play Store"
+  },
+  {
+    "name": "Facebook",
+    "dis": "Social media platform for connecting with friends and family.",
+    "img": "https://samy.nav.bd/img/39.png",
+    "urls": ["https://play.google.com/store/apps/details?id=com.facebook.katana"]
+  },
+  {
+    "name": "Instagram",
+    "dis": "Photo and video sharing social networking service.",
+    "img": "https://samy.nav.bd/img/40.png",
+    "urls": ["https://play.google.com/store/apps/details?id=com.instagram.android"]
+  },
+  {
+    "name": "Facebook Lite",
+    "dis": "Facebook Lite is a smaller, faster version of the Facebook app.",
+    "img": "https://samy.nav.bd/img/41.png",
+    "urls": ["https://play.google.com/store/apps/details?id=com.facebook.lite"]
+  },
+  {
+    "name": "Messenger",
+    "dis": "Instant messaging app from Meta.",
+    "img": "https://samy.nav.bd/img/42.png",
+    "urls": ["https://play.google.com/store/apps/details?id=com.facebook.orca"]
+  },
+  {
+    "name": "WhatsApp",
+    "dis": "Messaging and calling app.",
+    "img": "https://samy.nav.bd/img/43.png",
+    "urls": ["https://play.google.com/store/apps/details?id=com.whatsapp"]
+  },
+  {
+    "name": "imo",
+    "dis": "Video calling and messaging app.",
+    "img": "https://samy.nav.bd/img/44.png",
+    "urls": ["https://play.google.com/store/apps/details?id=com.imo.android.imoim"]
+  },
+  {
+    "name": "Google",
+    "dis": "Google app for search and feed.",
+    "img": "https://samy.nav.bd/img/45.png",
+    "urls": ["https://play.google.com/store/apps/details?id=com.google.android.googlequicksearchbox"]
+  },
+  {
+    "name": "Chrome",
+    "dis": "Fast, secure web browser by Google.",
+    "img": "https://samy.nav.bd/img/46.png",
+    "urls": ["https://play.google.com/store/apps/details?id=com.android.chrome"]
+  },
+  {
+    "name": "Drive",
+    "dis": "Cloud storage and file management.",
+    "img": "https://samy.nav.bd/img/47.png",
+    "urls": ["https://play.google.com/store/apps/details?id=com.google.android.apps.docs"]
+  },
+  {
+    "name": "Gmail",
+    "dis": "Email service by Google.",
+    "img": "https://samy.nav.bd/img/48.png",
+    "urls": ["https://play.google.com/store/apps/details?id=com.google.android.gm"]
+  },
+  {
+    "name": "Maps",
+    "dis": "Navigation and map service.",
+    "img": "https://samy.nav.bd/img/49.png",
+    "urls": ["https://play.google.com/store/apps/details?id=com.google.android.apps.maps"]
+  },
+  {
+    "name": "Files",
+    "dis": "File manager by Google.",
+    "img": "https://samy.nav.bd/img/50.png",
+    "urls": ["https://play.google.com/store/apps/details?id=com.google.android.apps.nbu.files"]
+  },
+  {
+    "name": "Photos",
+    "dis": "Photo storage and sharing.",
+    "img": "https://samy.nav.bd/img/51.png",
+    "urls": ["https://play.google.com/store/apps/details?id=com.google.android.apps.photos"]
+  },
+  {
+    "name": "Phone",
+    "dis": "Default dialer app.",
+    "img": "https://samy.nav.bd/img/52.png",
+    "urls": ["https://play.google.com/store/apps/details?id=com.google.android.dialer"]
+  },
+  {
+    "name": "Contacts",
+    "dis": "Manage your contacts.",
+    "img": "https://samy.nav.bd/img/53.png",
+    "urls": ["https://play.google.com/store/apps/details?id=com.google.android.contacts"]
+  },
+  {
+    "name": "Messages",
+    "dis": "SMS and RCS messaging.",
+    "img": "https://samy.nav.bd/img/54.png",
+    "urls": ["https://play.google.com/store/apps/details?id=com.google.android.apps.messaging"]
+  },
+  {
+    "name": "Gemini",
+    "dis": "AI-powered assistant from Google.",
+    "img": "https://samy.nav.bd/img/55.png",
+    "urls": ["https://play.google.com/store/apps/details?id=com.google.android.apps.bard"]
+  },
+  {
+    "name": "Google Passwords",
+    "dis": "Manage saved passwords.",
+    "img": "https://samy.nav.bd/img/56.png",
+    "urls": ["https://play.google.com/store/apps/details?id=com.google.android.apps.credentialmanager"]
+  },
+  {
+    "name": "Google Authenticator",
+    "dis": "Two-factor authentication codes.",
+    "img": "https://samy.nav.bd/img/57.png",
+    "urls": ["https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2"]
+  },
+  {
+    "name": "Google Wallet",
+    "dis": "Digital wallet for payments and passes.",
+    "img": "https://samy.nav.bd/img/58.png",
+    "urls": ["https://play.google.com/store/apps/details?id=com.google.android.apps.walletnfcrel"]
+  },
+  {
+    "name": "Google Lens",
+    "dis": "Image recognition technology.",
+    "img": "https://samy.nav.bd/img/59.png",
+    "urls": ["https://play.google.com/store/apps/details?id=com.google.ar.lens"]
+  },
+  {
+    "name": "Google's Find Hub",
+    "dis": "Locate and secure your lost Android devices.",
+    "img": "https://samy.nav.bd/img/35.png",
+    "urls": [
+      "https://play.google.com/store/apps/details?id=com.google.android.apps.adm"
+    ]
+  },
+{
+    "name": "Safety",
+    "dis": "Personal safety tools.",
+    "img": "https://samy.nav.bd/img/60.png",
+    "urls": ["https://play.google.com/store/apps/details?id=com.google.android.apps.safetyhub"]
+  },
+  {
+    "name": "YouTube",
+    "dis": "Video streaming platform.",
+    "img": "https://samy.nav.bd/img/61.png",
+    "urls": ["https://play.google.com/store/apps/details?id=com.google.android.youtube"]
+  },
+  {
+    "name": "YT Music",
+    "dis": "Music streaming service.",
+    "img": "https://samy.nav.bd/img/62.png",
+    "urls": ["https://play.google.com/store/apps/details?id=com.google.android.apps.youtube.music"]
+  },
+  {
+    "name": "bKash",
+    "dis": "Mobile financial service in Bangladesh.",
+    "img": "https://samy.nav.bd/img/63.png",
+    "urls": ["https://play.google.com/store/apps/details?id=com.bKash.customerapp"]
+  },
+  {
+    "name": "Nagad",
+    "dis": "Mobile financial service in Bangladesh.",
+    "img": "https://samy.nav.bd/img/64.png",
+    "urls": ["https://play.google.com/store/apps/details?id=com.konasl.nagad"]
+  },
+  {
+    "name": "Rocket",
+    "dis": "Mobile banking by Dutch-Bangla Bank.",
+    "img": "https://samy.nav.bd/img/65.png",
+    "urls": ["https://play.google.com/store/apps/details?id=com.dbbl.mbs.apps.main"]
+  },
+  {
+    "name": "BRAC Bank Astha",
+    "dis": "Digital banking app.",
+    "img": "https://samy.nav.bd/img/66.png",
+    "urls": ["https://play.google.com/store/apps/details?id=com.bracbank.astha"]
+  },
+  {
+    "name": "NexusPay",
+    "dis": "Card management and payment app.",
+    "img": "https://samy.nav.bd/img/67.png",
+    "urls": ["https://play.google.com/store/apps/details?id=com.dbbl.nexus.pay"]
+  },
+  {
+    "name": "PI Banking",
+    "dis": "Pubali Bank banking app.",
+    "img": "https://samy.nav.bd/img/68.png",
+    "urls": ["https://play.google.com/store/apps/details?id=com.pubali.internet.banking"]
+  },
+  {
+    "name": "My Airtel",
+    "dis": "Self-care app for Airtel users.",
+    "img": "https://samy.nav.bd/img/69.png",
+    "urls": ["https://play.google.com/store/apps/details?id=net.omobio.airtelsc"]
+  },
+  {
+    "name": "My Robi",
+    "dis": "Self-care app for Robi users.",
+    "img": "https://samy.nav.bd/img/70.png",
+    "urls": ["https://play.google.com/store/apps/details?id=net.omobio.robisc"]
+  },
+  {
+    "name": "MyGP",
+    "dis": "Self-care app for Grameenphone users.",
+    "img": "https://samy.nav.bd/img/71.png",
+    "urls": ["https://play.google.com/store/apps/details?id=com.portonics.mygp"]
+  },
+  {
+    "name": "MyBL",
+    "dis": "Self-care app for Banglalink users.",
+    "img": "https://samy.nav.bd/img/72.png",
+    "urls": ["https://play.google.com/store/apps/details?id=com.arena.banglalinkmela.app"]
+  },
+  {
+    "name": "My Teletalk",
+    "dis": "Self-care app for Teletalk users.",
+    "img": "https://samy.nav.bd/img/73.png",
+    "urls": ["https://play.google.com/store/apps/details?id=teletalk.teletalkcustomerapp"]
+  },
+  {
+    "name": "BL Power",
+    "dis": "Banglalink rewards app.",
+    "img": "https://samy.nav.bd/img/74.png",
+    "urls": ["https://play.google.com/store/apps/details?id=net.banglalink.blpower"]
+  },
+  {
+    "name": "Microsoft Edge",
+    "dis": "Microsoft Edge is a browser by Microsoft",
+    "img": "https://samy.nav.bd/img/29.png",
+    "urls": [
+      "https://play.google.com/store/apps/details?id=com.microsoft.emmx",
+      "https://explore.microsoft.com/en-us/edge/download?ch=1&form=MA13FJ&page_id=edge%2Fdownload"
+    ]
+  },
+  {
+    "name": "Outlook",
+    "dis": "Email and calendar app.",
+    "img": "https://samy.nav.bd/img/76.png",
+    "urls": ["https://play.google.com/store/apps/details?id=com.microsoft.office.outlook"]
+  },
+  {
+    "name": "OneDrive",
+    "dis": "Cloud storage by Microsoft.",
+    "img": "https://samy.nav.bd/img/77.png",
+    "urls": ["https://play.google.com/store/apps/details?id=com.microsoft.skydrive"]
+  },
+  {
+    "name": "Microsoft Authenticator",
+    "dis": "Microsoft 2FA app.",
+    "img": "https://samy.nav.bd/img/78.png",
+    "urls": ["https://play.google.com/store/apps/details?id=com.azure.authenticator"]
+  },
+  {
+    "name": "Bitwarden",
+    "dis": "Password manager.",
+    "img": "https://samy.nav.bd/img/79.png",
+    "urls": ["https://play.google.com/store/apps/details?id=com.x8bit.bitwarden"]
+  },
+  {
+    "name": "Bitwarden Authenticator",
+    "dis": "2FAS Authenticator.",
+    "img": "https://samy.nav.bd/img/80.png",
+    "urls": ["https://play.google.com/store/apps/details?id=com.bitwarden.authenticator"]
+  },
+  {
+    "name": "AOL",
+    "dis": "AOL email and news app.",
+    "img": "https://samy.nav.bd/img/81.png",
+    "urls": ["https://play.google.com/store/apps/details?id=com.aol.mobile.aolapp"]
+  },
+  {
+    "name": "Proton Mail",
+    "dis": "Encrypted email.",
+    "img": "https://samy.nav.bd/img/82.png",
+    "urls": ["https://play.google.com/store/apps/details?id=ch.protonmail.android"]
+  },
+  {
+    "name": "Proton Pass",
+    "dis": "Password manager.",
+    "img": "https://samy.nav.bd/img/83.png",
+    "urls": ["https://play.google.com/store/apps/details?id=proton.android.pass"]
+  },
+  {
+    "name": "addy.io",
+    "dis": "Email alias service.",
+    "img": "https://samy.nav.bd/img/84.png",
+    "urls": ["https://play.google.com/store/apps/details?id=host.stjin.anonaddy"]
+  },
+  {
+    "name": "Brave",
+    "dis": "The Brave browser blocks ads and trackers that slow you down and invade your privacy. Discover a new way of thinking about how the web can work.",
+    "img": "https://samy.nav.bd/img/28.png",
+    "urls": [
+      "https://play.google.com/store/apps/details?id=com.brave.browser",
+      "https://brave.com/"
+    ]
+  },
+  {
+    "name": "Brave Beta",
+    "dis": "Beta is a stable preview version of Brave that includes soon-to-be-released features. This build showcases the newest advances and is ready for daily use.",
+    "img": "https://samy.nav.bd/img/27.png",
+    "urls": [
+      "https://play.google.com/store/apps/details?id=com.brave.browser_beta",
+      "https://brave.com/download-beta/"
+    ]
+  },
+  {
+    "name": "Telegram",
+    "dis": "Secure messaging.",
+    "img": "https://samy.nav.bd/img/87.png",
+    "urls": ["https://play.google.com/store/apps/details?id=org.telegram.messenger"]
+  },
+  {
+    "name": "Telegram X",
+    "dis": "Experimental Telegram client.",
+    "img": "https://samy.nav.bd/img/88.png",
+    "urls": ["https://play.google.com/store/apps/details?id=org.thunderdog.challegram"]
+  },
+  {
+    "name": "TikTok",
+    "dis": "Short-form video platform.",
+    "img": "https://samy.nav.bd/img/89.png",
+    "urls": ["https://play.google.com/store/apps/details?id=com.ss.android.ugc.trill"]
+  },
+  {
+    "name": "X",
+    "dis": "Social media (formerly Twitter).",
+    "img": "https://samy.nav.bd/img/90.png",
+    "urls": ["https://play.google.com/store/apps/details?id=com.twitter.android"]
+  },
+  {
+    "name": "Threads",
+    "dis": "Text-based conversation app.",
+    "img": "https://samy.nav.bd/img/91.png",
+    "urls": ["https://play.google.com/store/apps/details?id=com.instagram.barcelona"]
+  },
+  {
+    "name": "WeChat",
+    "dis": "All-in-one messaging and social app.",
+    "img": "https://samy.nav.bd/img/92.png",
+    "urls": ["https://play.google.com/store/apps/details?id=com.tencent.mm"]
+  },
+  {
+    "name": "Tether",
+    "dis": "Tether app.",
+    "img": "https://samy.nav.bd/img/93.png",
+    "urls": ["https://play.google.com/store/apps/details?id=com.tplink.tether"]
+  },
+  {
+    "name": "Daraz",
+    "dis": "Online shopping.",
+    "img": "https://samy.nav.bd/img/94.png",
+    "urls": ["https://play.google.com/store/apps/details?id=com.daraz.android"]
+  },
+  {
+    "name": "GitHub",
+    "dis": "Code hosting platform.",
+    "img": "https://samy.nav.bd/img/95.png",
+    "urls": ["https://play.google.com/store/apps/details?id=com.github.android"]
+  },
+  {
+    "name": "1.1.1.1",
+    "dis": "Cloudflare DNS.",
+    "img": "https://samy.nav.bd/img/96.png",
+    "urls": ["https://play.google.com/store/apps/details?id=com.cloudflare.onedotonedotonedotone"]
+  },
+  {
+    "name": "Oto Music",
+    "dis": "Offline music player.",
+    "img": "https://samy.nav.bd/img/97.png",
+    "urls": ["https://play.google.com/store/apps/details?id=com.piyush.music"]
+  },
+  {
+    "name": "NekokoLPA 2",
+    "dis": "",
+    "img": "https://samy.nav.bd/img/98.png",
+    "urls": ["https://play.google.com/store/apps/details?id=ee.nekoko.nlpa"]
+  },
+  {
+    "name": "Shortcut Maker",
+    "dis": "Custom shortcut creator.",
+    "img": "https://samy.nav.bd/img/99.png",
+    "urls": ["https://play.google.com/store/apps/details?id=rk.android.app.shortcutmaker"]
+  },
+  {
+    "name": "RAR",
+    "dis": "Archive tool.",
+    "img": "https://samy.nav.bd/img/100.png",
+    "urls": ["https://play.google.com/store/apps/details?id=com.rarlab.rar"]
+  },
+  {
+    "name": "Sipnetic",
+    "dis": "VoIP/SIP softphone.",
+    "img": "https://samy.nav.bd/img/17.png",
+    "urls": ["https://play.google.com/store/apps/details?id=com.sipnetic.app"]
+  },
+  {
+    "name": "Google Docs",
+    "dis": "",
+    "img": "https://samy.nav.bd/img/75.png",
+    "urls": [
+      "https://play.google.com/store/apps/details?id=com.google.android.apps.docs.editors.docs"
+    ]
+  },
+  {
+    "name": "Gallery",
+    "dis": "",
+    "img": "https://samy.nav.bd/img/85.png",
+    "urls": [
+      "https://play.google.com/store/apps/details?id=com.google.android.apps.photosgo"
+    ]
+  },
+  {
+    "name": "Gboard",
+    "dis": "",
+    "img": "https://samy.nav.bd/img/86.png",
+    "urls": [
+      "https://play.google.com/store/apps/details?id=com.google.android.inputmethod.latin"
+    ]
+  },
+  {
+    "name": "Vivaldi Browser",
+    "dis": "",
+    "img": "https://samy.nav.bd/img/30.png",
+    "urls": [
+      "https://play.google.com/store/apps/details?id=com.vivaldi.browser"
+    ]
+  },
+  {
+    "name": "ONCALL | SIP",
+    "dis": "Professional SIP softphone for VoIP calling.",
+    "img": "https://samy.nav.bd/img/34.png",
+    "urls": [
+      "https://play.google.com/store/apps/details?id=com.portsip.oncall"
+    ]
+  },
+  {
+    "name": "IMEI Buddy",
+    "dis": "Check IMEI information and network status easily.",
+    "img": "https://samy.nav.bd/img/32.png",
+    "urls": [
+      "https://play.google.com/store/apps/details?id=io.github.chayanforyou.neir"
+    ]
+  },
+  {
+    "name": "Tile Shortcuts",
+    "dis": "Create custom quick settings tiles for your favorite apps.",
+    "img": "https://samy.nav.bd/img/33.png",
+    "urls": [
+      "https://play.google.com/store/apps/details?id=com.tombayley.tileshortcuts"
+    ]
+  },
+  {
+    "name": "Acode",
+    "dis": "Acode is an open-source code editor and web IDE for Android. Edit projects, manage files, use a Linux terminal, work with Git and SSH, and extend your setup with community plugins.",
+    "img": "https://play-lh.googleusercontent.com/PxB4ebclmosav4yUFzvSxswqs2dM10QIhGgv7DHHoo5e6gcLOS55Q-nKOYNxQC-4mR-PHbpEW2-HXENzdMSV=w480-h960-rw",
+    "urls": [
+      "https://play.google.com/store/apps/details?id=com.foxdebug.acodefree&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1",
+      "https://f-droid.org/en/packages/com.foxdebug.acode/",
+      "https://acode.app/"
+    ]
+  },
+  {
+    "name": "Image Toolbox",
+    "dis": "ImageToolbox is a versatile image editing tool designed for efficient photo manipulation. It allows users to crop, apply filters, edit EXIF data, erase backgrounds, and even enhance images with AI. Ideal for both photographers and developers, the tool offers a simple interface with powerful capabilities.",
+    "img": "https://samy.nav.bd/img/31.png",
+    "urls": [
+      "https://play.google.com/store/apps/details?id=ru.tech.imageresizershrinker",
+      "https://f-droid.org/packages/ru.tech.imageresizershrinker",
+      "https://github.com/T8RIN/ImageToolbox"
+    ]
+  },
+  {
+    "name": "Jellyfin",
+    "dis": "",
+    "img": "https://samy.nav.bd/img/26.png",
+    "urls": [
+      "https://play.google.com/store/apps/details?id=org.jellyfin.mobile",
+      "https://f-droid.org/packages/org.jellyfin.mobile",
+      "https://github.com/jellyfin/jellyfin-android/releases"
+    ]
+  },
+  {
+    "name": "Streamyfin",
+    "dis": "Streamyfin is a user-friendly Jellyfin video streaming client built with Expo. Designed as an alternative to other Jellyfin clients, it aims to offer a smooth and reliable streaming experience. We hope you'll find it a valuable addition to your media streaming toolbox.",
+    "img": "https://samy.nav.bd/img/36.png",
+    "urls": [
+      "https://play.google.com/store/apps/details?id=com.fredrikburmester.streamyfin",
+      "https://github.com/streamyfin/streamyfin"
+    ]
+  },
+  {
+    "name": "Fladder",
+    "dis": "A cross-platform Jellyfin Frontend built on top of Flutter.",
+    "img": "https://samy.nav.bd/img/37.png",
+    "urls": [
+      "https://play.google.com/store/apps/details?id=nl.jknaapen.fladder",
+      "https://github.com/DonutWare/Fladder"
+    ]
+  }
+]
