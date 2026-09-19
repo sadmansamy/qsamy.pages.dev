@@ -197,28 +197,28 @@
             <div class="custom-select-list" id="customEngineSelector">
                 <div class="custom-select-item" onclick="selectEngine('google')" data-engine="google">
                     <div class="custom-select-left">
-                        <img src="/img/google.webp" class="custom-select-logo" alt="">
+                        <img src="https://sadmansamy.github.io/google.webp" class="custom-select-logo" alt="">
                         <span>Google</span>
                     </div>
                     <div class="custom-select-radio"></div>
                 </div>
                 <div class="custom-select-item" onclick="selectEngine('brave')" data-engine="brave">
                     <div class="custom-select-left">
-                        <img src="/img/brave.webp" class="custom-select-logo" alt="">
+                        <img src="https://sadmansamy.github.io/brave.webp" class="custom-select-logo" alt="">
                         <span>Brave Search</span>
                     </div>
                     <div class="custom-select-radio"></div>
                 </div>
                 <div class="custom-select-item" onclick="selectEngine('duckduckgo')" data-engine="duckduckgo">
                     <div class="custom-select-left">
-                        <img src="/img/duckduckgo.webp" class="custom-select-logo" alt="">
+                        <img src="https://sadmansamy.github.io/duckduckgo.webp" class="custom-select-logo" alt="">
                         <span>DuckDuckGo</span>
                     </div>
                     <div class="custom-select-radio"></div>
                 </div>
                 <div class="custom-select-item" onclick="selectEngine('bing')" data-engine="bing">
                     <div class="custom-select-left">
-                        <img src="/img/bing.webp" class="custom-select-logo" alt="">
+                        <img src="https://sadmansamy.github.io/bing.webp" class="custom-select-logo" alt="">
                         <span>Bing</span>
                     </div>
                     <div class="custom-select-radio"></div>
@@ -246,7 +246,7 @@
     let jsonShortcuts = [], localShortcuts = [], searchHistory = [], isEditMode = false, db = null, temporaryBase64 = "", currentTheme = "light", currentEngine = "google";
     const urlInput = document.getElementById('urlInput'), historyPopup = document.getElementById('historyPopup'), localGrid = document.getElementById('localShortcutsGrid'), editToggleBtn = document.getElementById('editToggleBtn'), dynamicEngineBtn = document.getElementById('dynamicEngineBtn');
     const engines = { google: "https://www.google.com/search?q=", brave: "https://search.brave.com/search?q=", duckduckgo: "https://duckduckgo.com/?q=", bing: "https://www.bing.com/search?q=" };
-    const engineLogos = { google: "/img/google.webp", brave: "/img/brave.webp", duckduckgo: "/img/duckduckgo.webp", bing: "/img/bing.webp" };
+    const engineLogos = { google: "https://sadmansamy.github.io/google.webp", brave: "https://sadmansamy.github.io/brave.webp", duckduckgo: "https://sadmansamy.github.io/duckduckgo.webp", bing: "https://sadmansamy.github.io/bing.webp" };
 
     function clearAllCache() {
         if (confirm("Are you sure? This will wipe your history, local shortcuts, and settings.")) {
