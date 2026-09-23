@@ -115,7 +115,7 @@
                 const isAtBottom = chat.scrollHeight - chat.clientHeight <= chat.scrollTop + 60;
 
                 // CHANGED: chat.json -> draft.json
-                const response = await fetch('./draft.json?t=' + Date.now());
+                const response = await fetch('./draft-tutorial.json?t=' + Date.now());
                 if (!response.ok) throw new Error("File not found");
                 
                 const messages = await response.json();
