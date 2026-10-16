@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pally Bidyut 1060065233509</title>
+    <title>Palli Bidyut 1060065233509</title>
     <style>
         :root {
             --bg-color: #f4f0fa;
@@ -219,6 +219,40 @@
             border: 1px solid var(--card-border);
         }
 
+        /* Application Status Action Link */
+        .status-link-card {
+            margin-top: 24px;
+            text-align: center;
+        }
+
+        .status-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            padding: 14px 20px;
+            background: linear-gradient(135deg, var(--primary-accent) 0%, var(--secondary-accent) 100%);
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 14px rgba(107, 33, 168, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .status-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(107, 33, 168, 0.3);
+            opacity: 0.95;
+        }
+
+        .status-btn svg {
+            width: 16px;
+            height: 16px;
+        }
+
         .empty-message {
             text-align: center;
             color: var(--text-secondary);
@@ -234,7 +268,7 @@
     <header>
         <div class="header-title">
             <span class="live-dot"></span>
-            <h1>Pally Bidyut (Postpaid)</h1>
+            <h1>Palli Bidyut (Postpaid)</h1>
         </div>
         <div class="account-number-container">
             <span class="account-number" id="accountNo">1060065233509</span>
@@ -257,7 +291,19 @@
         <div id="receipts" class="tab-panel active"></div>
 
         <!-- Panel 2: Bills -->
-        <div id="bills" class="tab-panel"></div>
+        <div id="bills" class="tab-panel">
+            <div id="bills-feed"></div>
+            
+            <!-- Bottom Link for Application Status -->
+            <div class="status-link-card">
+                <a href="http://www.rebpbs.com/UI/OfficeAutomation/Monitoring/ConsumerManagement/frmApplicationStatusPublic.aspx" target="_blank" rel="noopener noreferrer" class="status-btn">
+                    <span>Check Palli Bidyut Application Status</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                </a>
+            </div>
+        </div>
     </div>
 
     <script>
@@ -348,7 +394,7 @@
 
         document.addEventListener('DOMContentLoaded', () => {
             renderFeed('aa_receipts.json', 'receipts');
-            renderFeed('aa_bills.json', 'bills');
+            renderFeed('aa_bills.json', 'bills-feed');
         });
     </script>
 </body>
