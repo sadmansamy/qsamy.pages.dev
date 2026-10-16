@@ -1,230 +1,355 @@
-[
-  {
-    "name": "",
-    "images": [
-      "https://qsamy.pages.dev/bill/header.jpg"
-    ]
-  },
-  {
-    "name": "December 2030",
-    "images": ["https://qsamy.pages.dev/bill/b203012.jpg"]
-  },
-  {
-    "name": "November 2030",
-    "images": ["https://qsamy.pages.dev/bill/b203011.jpg"]
-  },
-  {
-    "name": "October 2030",
-    "images": ["https://qsamy.pages.dev/bill/b203010.jpg"]
-  },
-  {
-    "name": "September 2030",
-    "images": ["https://qsamy.pages.dev/bill/b203009.jpg"]
-  },
-  {
-    "name": "August 2030",
-    "images": ["https://qsamy.pages.dev/bill/b203008.jpg"]
-  },
-  {
-    "name": "July 2030",
-    "images": ["https://qsamy.pages.dev/bill/b203007.jpg"]
-  },
-  {
-    "name": "June 2030",
-    "images": ["https://qsamy.pages.dev/bill/b203006.jpg"]
-  },
-  {
-    "name": "May 2030",
-    "images": ["https://qsamy.pages.dev/bill/b203005.jpg"]
-  },
-  {
-    "name": "April 2030",
-    "images": ["https://qsamy.pages.dev/bill/b203004.jpg"]
-  },
-  {
-    "name": "March 2030",
-    "images": ["https://qsamy.pages.dev/bill/b203003.jpg"]
-  },
-  {
-    "name": "February 2030",
-    "images": ["https://qsamy.pages.dev/bill/b203002.jpg"]
-  },
-  {
-    "name": "January 2030",
-    "images": ["https://qsamy.pages.dev/bill/b203001.jpg"]
-  },
-  {
-    "name": "December 2029",
-    "images": ["https://qsamy.pages.dev/bill/b202912.jpg"]
-  },
-  {
-    "name": "November 2029",
-    "images": ["https://qsamy.pages.dev/bill/b202911.jpg"]
-  },
-  {
-    "name": "October 2029",
-    "images": ["https://qsamy.pages.dev/bill/b202910.jpg"]
-  },
-  {
-    "name": "September 2029",
-    "images": ["https://qsamy.pages.dev/bill/b202909.jpg"]
-  },
-  {
-    "name": "August 2029",
-    "images": ["https://qsamy.pages.dev/bill/b202908.jpg"]
-  },
-  {
-    "name": "July 2029",
-    "images": ["https://qsamy.pages.dev/bill/b202907.jpg"]
-  },
-  {
-    "name": "June 2029",
-    "images": ["https://qsamy.pages.dev/bill/b202906.jpg"]
-  },
-  {
-    "name": "May 2029",
-    "images": ["https://qsamy.pages.dev/bill/b202905.jpg"]
-  },
-  {
-    "name": "April 2029",
-    "images": ["https://qsamy.pages.dev/bill/b202904.jpg"]
-  },
-  {
-    "name": "March 2029",
-    "images": ["https://qsamy.pages.dev/bill/b202903.jpg"]
-  },
-  {
-    "name": "February 2029",
-    "images": ["https://qsamy.pages.dev/bill/b202902.jpg"]
-  },
-  {
-    "name": "January 2029",
-    "images": ["https://qsamy.pages.dev/bill/b202901.jpg"]
-  },
-  {
-    "name": "December 2028",
-    "images": ["https://qsamy.pages.dev/bill/b202812.jpg"]
-  },
-  {
-    "name": "November 2028",
-    "images": ["https://qsamy.pages.dev/bill/b202811.jpg"]
-  },
-  {
-    "name": "October 2028",
-    "images": ["https://qsamy.pages.dev/bill/b202810.jpg"]
-  },
-  {
-    "name": "September 2028",
-    "images": ["https://qsamy.pages.dev/bill/b202809.jpg"]
-  },
-  {
-    "name": "August 2028",
-    "images": ["https://qsamy.pages.dev/bill/b202808.jpg"]
-  },
-  {
-    "name": "July 2028",
-    "images": ["https://qsamy.pages.dev/bill/b202807.jpg"]
-  },
-  {
-    "name": "June 2028",
-    "images": ["https://qsamy.pages.dev/bill/b202806.jpg"]
-  },
-  {
-    "name": "May 2028",
-    "images": ["https://qsamy.pages.dev/bill/b202805.jpg"]
-  },
-  {
-    "name": "April 2028",
-    "images": ["https://qsamy.pages.dev/bill/b202804.jpg"]
-  },
-  {
-    "name": "March 2028",
-    "images": ["https://qsamy.pages.dev/bill/b202803.jpg"]
-  },
-  {
-    "name": "February 2028",
-    "images": ["https://qsamy.pages.dev/bill/b202802.jpg"]
-  },
-  {
-    "name": "January 2028",
-    "images": ["https://qsamy.pages.dev/bill/b202801.jpg"]
-  },
-  {
-    "name": "December 2027",
-    "images": ["https://qsamy.pages.dev/bill/b202712.jpg"]
-  },
-  {
-    "name": "November 2027",
-    "images": ["https://qsamy.pages.dev/bill/b202711.jpg"]
-  },
-  {
-    "name": "October 2027",
-    "images": ["https://qsamy.pages.dev/bill/b202710.jpg"]
-  },
-  {
-    "name": "September 2027",
-    "images": ["https://qsamy.pages.dev/bill/b202709.jpg"]
-  },
-  {
-    "name": "August 2027",
-    "images": ["https://qsamy.pages.dev/bill/b202708.jpg"]
-  },
-  {
-    "name": "July 2027",
-    "images": ["https://qsamy.pages.dev/bill/b202707.jpg"]
-  },
-  {
-    "name": "June 2027",
-    "images": ["https://qsamy.pages.dev/bill/b202706.jpg"]
-  },
-  {
-    "name": "May 2027",
-    "images": ["https://qsamy.pages.dev/bill/b202705.jpg"]
-  },
-  {
-    "name": "April 2027",
-    "images": ["https://qsamy.pages.dev/bill/b202704.jpg"]
-  },
-  {
-    "name": "March 2027",
-    "images": ["https://qsamy.pages.dev/bill/b202703.jpg"]
-  },
-  {
-    "name": "February 2027",
-    "images": ["https://qsamy.pages.dev/bill/b202702.jpg"]
-  },
-  {
-    "name": "January 2027",
-    "images": ["https://qsamy.pages.dev/bill/b202701.jpg"]
-  },
-  {
-    "name": "December 2026",
-    "images": ["https://qsamy.pages.dev/bill/b202612.jpg"]
-  },
-  {
-    "name": "November 2026",
-    "images": ["https://qsamy.pages.dev/bill/b202611.jpg"]
-  },
-  {
-    "name": "October 2026",
-    "images": ["https://qsamy.pages.dev/bill/b202610.jpg"]
-  },
-  {
-    "name": "September 2026",
-    "images": ["https://qsamy.pages.dev/bill/b202609.jpg"]
-  },
-  {
-    "name": "August 2026",
-    "images": [
-      "https://qsamy.pages.dev/bill/b202608_a.jpg",
-      "https://qsamy.pages.dev/bill/b202608_b.jpg"
-    ]
-  },
-  {
-    "name": "Meter Application Details:",
-    "images": [
-      "https://qsamy.pages.dev/bill/application.jpg",
-      "https://qsamy.pages.dev/bill/application_massage.jpg"
-    ]
-  }
-]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pally Bidyut 1060065233509</title>
+    <style>
+        :root {
+            --bg-color: #f4f0fa;
+            --card-bg: #ffffff;
+            --card-border: #e9e1f5;
+            --primary-accent: #6b21a8;
+            --secondary-accent: #9333ea;
+            --text-primary: #1e1333;
+            --text-secondary: #6b5b85;
+            --success-color: #16a34a;
+            --border-radius: 18px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", sans-serif;
+            color: var(--text-primary);
+            padding-bottom: 40px;
+            min-height: 100vh;
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(147, 51, 234, 0.06) 0%, transparent 60%),
+                radial-gradient(circle at 100% 100%, rgba(107, 33, 168, 0.04) 0%, transparent 50%);
+            background-attachment: fixed;
+        }
+
+        /* Modern App Header */
+        header {
+            position: sticky;
+            top: 0;
+            background-color: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            padding: 18px 20px;
+            text-align: center;
+            border-bottom: 1px solid var(--card-border);
+            z-index: 1000;
+        }
+
+        .header-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        header h1 {
+            font-size: 19px;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+            color: var(--primary-accent);
+        }
+
+        /* Status Dot */
+        .live-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--secondary-accent);
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(147, 51, 234, 0.5);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(147, 51, 234, 0.6); }
+            70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(147, 51, 234, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(147, 51, 234, 0); }
+        }
+
+        /* Account Badge & Copy Button */
+        .account-number-container {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 8px;
+            background: #ede7f6;
+            padding: 6px 14px;
+            border-radius: 20px;
+            border: 1px solid var(--card-border);
+            transition: all 0.3s ease;
+        }
+
+        .account-number-container:hover {
+            border-color: rgba(147, 51, 234, 0.4);
+            box-shadow: 0 2px 8px rgba(147, 51, 234, 0.12);
+        }
+
+        .account-number {
+            font-size: 13px;
+            color: var(--text-secondary);
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            letter-spacing: 0.8px;
+            font-weight: 600;
+        }
+
+        .copy-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            transition: all 0.2s ease;
+        }
+
+        .copy-btn:hover {
+            color: var(--primary-accent);
+            transform: scale(1.1);
+        }
+
+        .copy-btn svg {
+            width: 15px;
+            height: 15px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px 16px;
+        }
+
+        /* Segmented Light Purple Tab Switcher */
+        .tab-switcher {
+            display: flex;
+            background: #e9e1f5;
+            padding: 5px;
+            border-radius: 14px;
+            margin-bottom: 24px;
+            border: 1px solid var(--card-border);
+        }
+
+        .tab-btn {
+            flex: 1;
+            padding: 12px 0;
+            border: none;
+            background: transparent;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            letter-spacing: 0.3px;
+        }
+
+        .tab-btn.active {
+            background: #ffffff;
+            color: var(--primary-accent);
+            box-shadow: 0 4px 12px rgba(107, 33, 168, 0.1);
+        }
+
+        /* View Panels */
+        .tab-panel {
+            display: none;
+        }
+
+        .tab-panel.active {
+            display: block;
+            animation: slideUp 0.3s ease-out;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Light Card Design */
+        .post {
+            background: var(--card-bg);
+            margin-bottom: 20px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            border: 1px solid var(--card-border);
+            box-shadow: 0 4px 16px rgba(107, 33, 168, 0.04);
+            transition: all 0.3s ease;
+        }
+
+        .post:hover {
+            border-color: rgba(147, 51, 234, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(107, 33, 168, 0.08);
+        }
+
+        .photo-name {
+            padding: 14px 18px;
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--text-primary);
+            border-bottom: 1px solid var(--card-border);
+            letter-spacing: 0.2px;
+        }
+
+        .photo-container {
+            background-color: #fcfaff;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .photo-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 12px;
+            border: 1px solid var(--card-border);
+        }
+
+        .empty-message {
+            text-align: center;
+            color: var(--text-secondary);
+            padding: 50px 0;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-title">
+            <span class="live-dot"></span>
+            <h1>Pally Bidyut (Postpaid)</h1>
+        </div>
+        <div class="account-number-container">
+            <span class="account-number" id="accountNo">1060065233509</span>
+            <button class="copy-btn" onclick="copyAccountNo()" title="Copy Account Number" id="copyBtn">
+                <svg id="copyIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Segmented Tab Switcher -->
+        <div class="tab-switcher">
+            <button class="tab-btn active" onclick="switchTab('receipts')">Receipts</button>
+            <button class="tab-btn" onclick="switchTab('bills')">Bills</button>
+        </div>
+
+        <!-- Panel 1: Receipts -->
+        <div id="receipts" class="tab-panel active"></div>
+
+        <!-- Panel 2: Bills -->
+        <div id="bills" class="tab-panel"></div>
+    </div>
+
+    <script>
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
+
+            if (tabId === 'receipts') {
+                document.querySelectorAll('.tab-btn')[0].classList.add('active');
+                document.getElementById('receipts').classList.add('active');
+            } else {
+                document.querySelectorAll('.tab-btn')[1].classList.add('active');
+                document.getElementById('bills').classList.add('active');
+            }
+        }
+
+        function copyAccountNo() {
+            const numberText = document.getElementById('accountNo').innerText;
+            navigator.clipboard.writeText(numberText).then(() => {
+                const copyIcon = document.getElementById('copyIcon');
+                
+                // Show green checkmark feedback
+                copyIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />`;
+                copyIcon.style.color = 'var(--success-color)';
+
+                setTimeout(() => {
+                    // Reset back to copy icon
+                    copyIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />`;
+                    copyIcon.style.color = '';
+                }, 2000);
+            });
+        }
+
+        function renderFeed(jsonFile, containerId) {
+            fetch(jsonFile)
+                .then(response => response.json())
+                .then(posts => {
+                    const container = document.getElementById(containerId);
+
+                    if (!posts || posts.length === 0) {
+                        container.innerHTML = '<div class="empty-message">No records found.</div>';
+                        return;
+                    }
+
+                    posts.forEach(post => {
+                        const postDiv = document.createElement('div');
+                        postDiv.className = 'post';
+
+                        if (post.name && post.name.trim() !== "") {
+                            const nameDiv = document.createElement('div');
+                            nameDiv.className = 'photo-name';
+                            nameDiv.textContent = post.name;
+                            postDiv.appendChild(nameDiv);
+                        }
+
+                        const imgContainer = document.createElement('div');
+                        imgContainer.className = 'photo-container';
+
+                        let validImagesCount = post.images.length;
+
+                        post.images.forEach(imageUrl => {
+                            const img = document.createElement('img');
+                            img.src = imageUrl;
+                            img.alt = post.name || "Document Image";
+                            img.className = 'photo-img';
+                            img.loading = 'lazy';
+
+                            img.onerror = () => {
+                                img.style.display = 'none';
+                                validImagesCount--;
+                                if (validImagesCount === 0) {
+                                    postDiv.style.display = 'none';
+                                }
+                            };
+
+                            imgContainer.appendChild(img);
+                        });
+
+                        postDiv.appendChild(imgContainer);
+                        container.appendChild(postDiv);
+                    });
+                })
+                .catch(error => {
+                    console.error(`Error loading ${jsonFile}:`, error);
+                    document.getElementById(containerId).innerHTML = '<div class="empty-message">Unable to load data.</div>';
+                });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderFeed('aa_receipts.json', 'receipts');
+            renderFeed('aa_bills.json', 'bills');
+        });
+    </script>
+</body>
+</html>
