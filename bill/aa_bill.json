@@ -1,9 +1,7 @@
 [
   {
-    "name": "Meter Application and Information",
+    "name": "",
     "images": [
-      "https://qsamy.pages.dev/bill/application.jpg",
-      "https://qsamy.pages.dev/bill/application.pdf",
       "https://qsamy.pages.dev/bill/header.jpg"
     ]
   },
@@ -220,6 +218,13 @@
     "images": [
       "https://qsamy.pages.dev/bill/b202608_a.jpg",
       "https://qsamy.pages.dev/bill/b202608_b.jpg"
+    ]
+  },
+  {
+    "name": "Meter Application Details:",
+    "images": [
+      "https://qsamy.pages.dev/bill/application.jpg",
+      "https://qsamy.pages.dev/bill/application_massage.jpg"
     ]
   }
 ]
