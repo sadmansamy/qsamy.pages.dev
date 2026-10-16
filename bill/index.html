@@ -157,13 +157,13 @@
         <!-- Segmented Tab Switcher -->
         <div class="tab-switcher">
             <button class="tab-btn active" onclick="switchTab('receipts')">Receipts</button>
-            <button class="tab-btn" onclick="switchTab('others')">Others</button>
+            <button class="tab-btn" onclick="switchTab('bills')">Bills</button>
         </div>
 
         <!-- Panel 1: Receipts -->
         <div id="receipts" class="tab-panel active"></div>
 
-        <!-- Panel 2: Others -->
+        <!-- Panel 2: Bills -->
         <div id="others" class="tab-panel"></div>
     </div>
 
@@ -172,12 +172,12 @@
             document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
             document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
 
-            if (tabId === 'receipts') {
+            if (tabId === 'bills') {
                 document.querySelectorAll('.tab-btn')[0].classList.add('active');
                 document.getElementById('receipts').classList.add('active');
             } else {
                 document.querySelectorAll('.tab-btn')[1].classList.add('active');
-                document.getElementById('others').classList.add('active');
+                document.getElementById('bills').classList.add('active');
             }
         }
 
@@ -238,7 +238,7 @@
 
         document.addEventListener('DOMContentLoaded', () => {
             renderFeed('aa_receipts.json', 'receipts');
-            renderFeed('aa_others.json', 'others');
+            renderFeed('aa_bills.json', 'bills');
         });
     </script>
 </body>
