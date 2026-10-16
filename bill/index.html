@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=yes">
     <title>Palli Bidyut 1060065233509</title>
     <style>
         :root {
@@ -267,7 +267,7 @@
             left: 0;
             width: 100vw;
             height: 100vh;
-            background-color: rgba(15, 10, 25, 0.92);
+            background-color: rgba(15, 10, 25, 0.94);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             z-index: 2000;
@@ -288,70 +288,76 @@
         }
 
         .lightbox-img {
-            max-width: 90vw;
-            max-height: 85vh;
+            max-width: 92vw;
+            max-height: 75vh;
             object-fit: contain;
-            transition: transform 0.1s linear;
+            transition: transform 0.08s ease-out;
             cursor: grab;
             user-select: none;
+            touch-action: none;
         }
 
         .lightbox-img:active {
             cursor: grabbing;
         }
 
-        /* Lightbox Control Buttons */
+        /* Elevated Fixed Lightbox Controls */
         .lightbox-controls {
-            position: absolute;
-            bottom: 30px;
+            position: fixed;
+            bottom: calc(30px + env(safe-area-inset-bottom, 15px));
             left: 50%;
             transform: translateX(-50%);
             display: flex;
-            gap: 12px;
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
-            padding: 8px 16px;
-            border-radius: 30px;
+            align-items: center;
+            gap: 16px;
+            background: rgba(30, 20, 50, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            padding: 10px 20px;
+            border-radius: 40px;
             border: 1px solid rgba(255, 255, 255, 0.2);
-            z-index: 2100;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+            z-index: 2200;
         }
 
         .control-btn {
-            background: none;
-            border: none;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.15);
             color: #ffffff;
-            font-size: 18px;
-            font-weight: bold;
-            width: 36px;
-            height: 36px;
+            font-size: 20px;
+            font-weight: 700;
+            width: 42px;
+            height: 42px;
             border-radius: 50%;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: background 0.2s;
+            transition: all 0.2s ease;
         }
 
-        .control-btn:hover {
-            background: rgba(255, 255, 255, 0.25);
+        .control-btn:active {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(0.92);
         }
 
         .close-btn {
-            position: absolute;
-            top: 20px;
+            position: fixed;
+            top: calc(20px + env(safe-area-inset-top, 10px));
             right: 20px;
-            background: rgba(255, 255, 255, 0.15);
+            background: rgba(30, 20, 50, 0.85);
             border: 1px solid rgba(255, 255, 255, 0.2);
             color: #ffffff;
-            width: 40px;
-            height: 40px;
+            width: 44px;
+            height: 44px;
             border-radius: 50%;
-            font-size: 20px;
+            font-size: 22px;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            z-index: 2100;
+            z-index: 2200;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
         }
 
         .empty-message {
@@ -412,9 +418,9 @@
         <button class="close-btn" onclick="closeLightbox()">&times;</button>
         <img id="lightboxImg" class="lightbox-img" src="" alt="Enlarged Document">
         <div class="lightbox-controls">
-            <button class="control-btn" onclick="zoomImage(0.25)">+</button>
-            <button class="control-btn" onclick="zoomImage(-0.25)">-</button>
-            <button class="control-btn" onclick="resetZoom()">&#215;</button>
+            <button class="control-btn" onclick="zoomImage(-0.3)" title="Zoom Out">&#8722;</button>
+            <button class="control-btn" onclick="resetZoom()" title="Reset">&#215;</button>
+            <button class="control-btn" onclick="zoomImage(0.3)" title="Zoom In">&#43;</button>
         </div>
     </div>
 
@@ -448,13 +454,15 @@
             });
         }
 
-        // Lightbox Zoom & Pan Logic
+        // Lightbox Zoom, Pan & Pinch Logic
         let scale = 1;
         let pointX = 0;
         let pointY = 0;
         let startX = 0;
         let startY = 0;
         let isDragging = false;
+        let initialPinchDistance = null;
+        let initialPinchScale = 1;
 
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightboxImg');
@@ -490,7 +498,7 @@
             lightboxImg.style.transform = `translate(${pointX}px, ${pointY}px) scale(${scale})`;
         }
 
-        // Drag / Pan Image
+        // Mouse Drag / Pan
         lightboxImg.addEventListener('mousedown', (e) => {
             if (scale <= 1) return;
             e.preventDefault();
@@ -511,23 +519,53 @@
             isDragging = false;
         });
 
-        // Touch event support for Mobile Pan
+        // Touch Gestures (Pinch to Zoom & Pan)
+        function getTouchDistance(touches) {
+            const dx = touches[0].clientX - touches[1].clientX;
+            const dy = touches[0].clientY - touches[1].clientY;
+            return Math.hypot(dx, dy);
+        }
+
         lightboxImg.addEventListener('touchstart', (e) => {
-            if (scale <= 1 || e.touches.length !== 1) return;
-            isDragging = true;
-            startX = e.touches[0].clientX - pointX;
-            startY = e.touches[0].clientY - pointY;
-        });
+            if (e.touches.length === 2) {
+                // Initial Pinch
+                isDragging = false;
+                initialPinchDistance = getTouchDistance(e.touches);
+                initialPinchScale = scale;
+            } else if (e.touches.length === 1 && scale > 1) {
+                // Pan / Drag
+                isDragging = true;
+                startX = e.touches[0].clientX - pointX;
+                startY = e.touches[0].clientY - pointY;
+            }
+        }, { passive: false });
 
         lightboxImg.addEventListener('touchmove', (e) => {
-            if (!isDragging || e.touches.length !== 1) return;
-            pointX = e.touches[0].clientX - startX;
-            pointY = e.touches[0].clientY - startY;
-            updateTransform();
-        });
+            if (e.touches.length === 2 && initialPinchDistance) {
+                e.preventDefault();
+                const currentDistance = getTouchDistance(e.touches);
+                const pinchRatio = currentDistance / initialPinchDistance;
+                scale = Math.min(Math.max(1, initialPinchScale * pinchRatio), 4);
+                if (scale === 1) {
+                    pointX = 0;
+                    pointY = 0;
+                }
+                updateTransform();
+            } else if (e.touches.length === 1 && isDragging) {
+                e.preventDefault();
+                pointX = e.touches[0].clientX - startX;
+                pointY = e.touches[0].clientY - startY;
+                updateTransform();
+            }
+        }, { passive: false });
 
-        lightboxImg.addEventListener('touchend', () => {
-            isDragging = false;
+        lightboxImg.addEventListener('touchend', (e) => {
+            if (e.touches.length < 2) {
+                initialPinchDistance = null;
+            }
+            if (e.touches.length === 0) {
+                isDragging = false;
+            }
         });
 
         // Close on background click
@@ -571,7 +609,6 @@
                             img.className = 'photo-img';
                             img.loading = 'lazy';
 
-                            // Open full-screen lightbox on click/touch
                             img.onclick = () => openLightbox(imageUrl);
 
                             img.onerror = () => {
