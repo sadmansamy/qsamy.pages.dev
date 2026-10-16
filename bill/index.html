@@ -289,7 +289,7 @@
 
         .lightbox-img {
             max-width: 92vw;
-            max-height: 75vh;
+            max-height: 85vh;
             object-fit: contain;
             transition: transform 0.08s ease-out;
             cursor: grab;
@@ -299,46 +299,6 @@
 
         .lightbox-img:active {
             cursor: grabbing;
-        }
-
-        /* Elevated Fixed Lightbox Controls */
-        .lightbox-controls {
-            position: fixed;
-            bottom: calc(30px + env(safe-area-inset-bottom, 15px));
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            background: rgba(30, 20, 50, 0.85);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            padding: 10px 20px;
-            border-radius: 40px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-            z-index: 2200;
-        }
-
-        .control-btn {
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            color: #ffffff;
-            font-size: 20px;
-            font-weight: 700;
-            width: 42px;
-            height: 42px;
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.2s ease;
-        }
-
-        .control-btn:active {
-            background: rgba(255, 255, 255, 0.3);
-            transform: scale(0.92);
         }
 
         .close-btn {
@@ -417,11 +377,6 @@
     <div id="lightbox" class="lightbox-modal">
         <button class="close-btn" onclick="closeLightbox()">&times;</button>
         <img id="lightboxImg" class="lightbox-img" src="" alt="Enlarged Document">
-        <div class="lightbox-controls">
-            <button class="control-btn" onclick="zoomImage(-0.3)" title="Zoom Out">&#8722;</button>
-            <button class="control-btn" onclick="resetZoom()" title="Reset">&#215;</button>
-            <button class="control-btn" onclick="zoomImage(0.3)" title="Zoom In">&#43;</button>
-        </div>
     </div>
 
     <script>
@@ -454,7 +409,7 @@
             });
         }
 
-        // Lightbox Zoom, Pan & Pinch Logic
+        // Lightbox Zoom, Pan & Scroll Logic
         let scale = 1;
         let pointX = 0;
         let pointY = 0;
@@ -478,15 +433,6 @@
             lightboxImg.src = '';
         }
 
-        function zoomImage(amount) {
-            scale = Math.min(Math.max(1, scale + amount), 4);
-            if (scale === 1) {
-                pointX = 0;
-                pointY = 0;
-            }
-            updateTransform();
-        }
-
         function resetZoom() {
             scale = 1;
             pointX = 0;
@@ -498,7 +444,19 @@
             lightboxImg.style.transform = `translate(${pointX}px, ${pointY}px) scale(${scale})`;
         }
 
-        // Mouse Drag / Pan
+        // Mouse Wheel & Trackpad Pinch-to-Zoom (Desktop)
+        lightbox.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            const delta = e.deltaY < 0 ? 0.2 : -0.2;
+            scale = Math.min(Math.max(1, scale + delta), 4);
+            if (scale === 1) {
+                pointX = 0;
+                pointY = 0;
+            }
+            updateTransform();
+        }, { passive: false });
+
+        // Mouse Drag / Pan (Desktop)
         lightboxImg.addEventListener('mousedown', (e) => {
             if (scale <= 1) return;
             e.preventDefault();
@@ -519,7 +477,7 @@
             isDragging = false;
         });
 
-        // Touch Gestures (Pinch to Zoom & Pan)
+        // Touch Gestures (Mobile Pinch-to-Zoom & Pan)
         function getTouchDistance(touches) {
             const dx = touches[0].clientX - touches[1].clientX;
             const dy = touches[0].clientY - touches[1].clientY;
@@ -528,12 +486,10 @@
 
         lightboxImg.addEventListener('touchstart', (e) => {
             if (e.touches.length === 2) {
-                // Initial Pinch
                 isDragging = false;
                 initialPinchDistance = getTouchDistance(e.touches);
                 initialPinchScale = scale;
             } else if (e.touches.length === 1 && scale > 1) {
-                // Pan / Drag
                 isDragging = true;
                 startX = e.touches[0].clientX - pointX;
                 startY = e.touches[0].clientY - pointY;
